@@ -1,6 +1,9 @@
 # for i in range(10):
 #     print(i)
 
+
+#how thios code work "*Outer loop = 5 times *Inner loop = har baar 5 times"
+#5 × 5 = 25 baar inner print
 x = 5
 n = 5
 
