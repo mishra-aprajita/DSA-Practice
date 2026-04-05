@@ -1,48 +1,40 @@
-# <----- Implementation of Stack using List ----->
 class Stack:
-    # <----- Creating Constructor for Stack Initialization ------>
-    def __init__ (self):
+    def __init__(self):
         self.stack = []
 
-    # <----- Inserting an Element ----->
-    def push(self, data):
-        self.stack.append(data)
+    def push(self,item):
+        self.stack.append(item)
+        print(item,"append")  
 
-    # <----- Removing an Element ----->
     def pop(self):
         if len(self.stack)==0:
-            print("UnderFlow")
-            return
-        self.stack.pop()
-    
-    # <----- Clecking Top Element ----->
+            print("stack underflow")      
+        else:
+            (self.stack.pop(),"element popped")    
+
     def peek(self):
         if len(self.stack)==0:
-            print("UnderFlow")
-            return
-        print(self.stack[-1])
-    
-    # <----- Checking stack is Empty or Not ----->
-    
-    def empty(self):
-        if len(self.stack)==0:
-            print("Stack is Empty")
+            print("Stack is empty")
         else:
-            print("Stack is Not Empty")
+            print(self.stack[0])     
 
-    # <----- checking the size of the stack ----->
-    
-    def size(self):
-        print(len(self.stack))
+    def isEmpty(self):
+        if len(self.stack)==0:
+            print("stack is empty")
+        else:
+            print("stack is full")                   
 
-# <----- Creating an Object of Stack class----->
+    def display(self):
+        print(self.stack)  
+
+          
+
+
 s = Stack()
-s.push("Aprajita")
-s.push("Anushka")
-# s.empty()
-s.size()
-s.peek()
+s.push(10)       
+s.push(20)       
+s.push(30)  
+
 s.pop()
-s.peek()
-s.pop()
-s.empty()
+
+s.display()
