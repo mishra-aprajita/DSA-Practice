@@ -25,10 +25,7 @@ class Stack:
             print("stack is full")                   
 
     def display(self):
-        print(self.stack)  
-
-          
-
+        print(self.stack) 
 
 s = Stack()
 s.push(10)       
