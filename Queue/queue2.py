@@ -1,12 +1,22 @@
-queue = []
+class Queue:
+    def __init__(self):
+        self.q = []
 
-# Enqueue
-queue.append(10)
-queue.append(20)
-queue.append(30)
+    def enqueue(self, x):
+        self.q.append(x)
 
-print("Queue:", queue)
+    def dequeue(self):
+        print(self.q.pop(0))
 
-# Dequeue
-queue.pop(0)
 
+q = Queue()
+
+q.enqueue(10)
+q.enqueue(20)
+q.enqueue(30)
+
+print(q.q)
+
+q.dequeue()
+
+print(q.q)
