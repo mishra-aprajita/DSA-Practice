@@ -1,44 +1,37 @@
 class Queue:
     def __init__(self):
-        self.queue = []
+        self.q = []
 
-    def enqueue(self, item):
-        self.queue.append(item)
-        print(item, "inserted into queue")
+    def enqueue(self, x):
+        self.q.append(x)
 
     def dequeue(self):
-        if len(self.queue) == 0:
-            print("Queue is empty")
+        if self.q:
+            print("Deleted:", self.q.pop(0))
         else:
-            removed = self.queue.pop(0)
-            print(removed, "removed from queue")
+            print("Queue Empty")
 
-    def peek(self):
-        if len(self.queue) == 0:
-            print("Queue is empty")
-        else:
-            print("Front element:", self.queue[0])
+    def first(self):
+        print("First:", self.q[0])
+
+    def last(self):
+        print("Last:", self.q[-1])
 
     def display(self):
-        print("Queue:", self.queue)
+        print("Queue:", self.q)
 
 
 q = Queue()
 
-q.enqueue("Aprajita")
-q.enqueue("Ritika")
-q.enqueue("KALU KALIYA")
+q.enqueue(10)
+q.enqueue(20)
+q.enqueue(30)
 
 q.display()
+
+q.first()
+q.last()
 
 q.dequeue()
 
 q.display()
-q.dequeue()
-q.display()
-q.dequeue()
-q.display()
-q.dequeue()
-q.display()
-
-#q.peek()

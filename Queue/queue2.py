@@ -10,4 +10,3 @@ print("Queue:", queue)
 # Dequeue
 queue.pop(0)
 
-print("Queue after dequeue:", queue)rgba(177, 7, 95, 1)
