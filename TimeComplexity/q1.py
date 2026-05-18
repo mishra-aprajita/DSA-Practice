@@ -26,3 +26,10 @@ for i in range(n):
     for j in range(n):
         for k in range(n):
             print(i, j, k)
+            
+# O(log n)
+n = 16
+
+while n > 1:
+    print(n)
+    n = n // 2
