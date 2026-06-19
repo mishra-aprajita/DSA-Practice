@@ -17,8 +17,6 @@ class Stack:
             return None
         return self.stack[-1] 
 
-
-
 s = Stack()
 
 s.push(10)
